@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+    <title>Contablito</title>
+</head>
+
+<body>
+    <h1 class="center" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Contablito
+    </h1>
+
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" style="color:white" href="index.html">Inventario</a>
+            <a class="py-2 d-none d-md-inline-block" style="color:white" href="form.html">Gestión de productos</a>
+            <a class="py-2 d-none d-md-inline-block" style="color:white" href="products.html">Progreso</a>
+            <a class="py-2 d-none d-md-inline-block" style="color:white" href="sell.html">Gestión de usuarios</a>
+            <div class="dropdown">
+                <a style="text-align:center;height:41px; padding-top:8px"
+                    class="btn btn-secondary dropdown-toggle, d-none d-md-inline-block" id="User" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" id="ToLogin" href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
+    </nav>
+    <br>
+
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"><button id="btnChart" type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#ModalChart" style="background-color: rgb(67, 71, 71); border-color:rgb(67, 71, 71)">Gráfica
+
+                </button></div> 
+                
+            </div>
+        </div>
+    </br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de transacción</th>
+                    <th>Tipo de IVA</th>
+                    <th>Monto</th>
+                    <th>Producto</th>
+                    <th>Fecha</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody id="totransactions"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal chart -->
+    <div class="modal fade" id="ModalChart" tabindex="-1" aria-labelledby="TitleChart" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="TitleChart">Gráfica</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <!-- <p class="highcharts-description">
+                      Basic line chart showing trends in a dataset. This chart includes the
+                      <code>series-label</code> module, which adds a label to each line for
+                      enhanced readability.
+                    </p> -->
+                  </figure>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+
+    <footer class="text-muted bg-light">
+        <div class="container">
+            <p>Este sitio fue creado por DN Servicios</p>
+        </div>
+    </footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/init.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="js/transactions.js"></script>
+<script src="js/verification.js"></script>
+
+</html>

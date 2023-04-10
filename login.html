@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Ingreso de usuario</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body class="text-center">
+   
+
+  <div class="signin">
+    <h1 class="header">Contablito</h1>
+    <img class="cover-ingreso" src="img/icon.PNG" width=100px height="auto">
+    <form method="GET" onsubmit="return false">
+      <!--Se emplea return false para que no haga submit (autenticación ficticia)-->
+      <br>
+      <input style='width: 100%' id="datauser" type="text" name="User" placeholder="Nombre de usuario" value=""><br><br>
+      <input style='width: 100%' id="datapassword" type="password" name="Password" placeholder="Contraseña"
+        value=""><br><br>
+
+      <div>
+        <button class="AccessButton">Ingresar</button><br></br>
+    </div>
+        <!----------------------------------------------->
+    </form>
+  </div>
+ 
+  </div>
+ 
+  <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
+  
+</body>
+
+</html>

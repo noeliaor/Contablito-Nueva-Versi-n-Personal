@@ -1,0 +1,26 @@
+{
+  "name": "contablito-personalversion",
+  "version": "1.0.0",
+  "description": "App de escritorio Contablito",
+  "main": "index.js",
+    "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-packager ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noeliaor/Contablito-PersonalVersion.git"
+  },
+  "author": "Noelia Olivera",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^17.0.0",
+    "electron-packager": "^15.4.0"
+    
+  },
+  "bugs": {
+    "url": "https://github.com/noeliaor/Contablito-PersonalVersion/issues"
+  },
+  "homepage": "https://github.com/noeliaor/Contablito-PersonalVersion#readme"
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>Contablito</title>
+</head>
+
+<body>
+  <h1 class="center" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Contablito
+  </h1>
+
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" style="color:white" href="index.html">Inventario</a>
+      <a class="py-2 d-none d-md-inline-block" style="color:white" href="form.html">Gestión de productos</a>
+      <a class="py-2 d-none d-md-inline-block" style="color:white" href="products.html">Progreso</a>
+      <a class="py-2 d-none d-md-inline-block" style="color:white" href="sell.html">Gestión de usuarios</a>
+      <div class="dropdown">
+        <a style="text-align:center;height:41px; padding-top:8px"
+          class="btn btn-secondary dropdown-toggle, d-none d-md-inline-block" id="User" role="button"
+          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path
+              d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+          </svg>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" id="ToLogin" href="login.html">Cerrar sesión</a>
+        </div>
+      </div>
+  </nav>
+  <br>
+
+  <form>
+    <div class="container">
+      <div class="row container p-0 m-0">
+        <div class="col-auto">
+          <p class="font-weight-bold my-2" style="margin-left: 20px;">ID</p>
+        </div>
+        <div class="col-auto">
+          <input class="form-control" type="search" id="ProductDescription">
+        </div>
+        <div class="col-auto">
+          <p class="font-weight-bold my-2">Tipo Transacción</p>
+        </div>
+        <div class="col-auto">
+          <input class="my-2" id="compra" type="radio" name="type" value="Compra" checked> Compra
+          <input class="my-2" id="venta" type="radio" name="type" value="Venta"> Venta
+        </div>
+      </div>
+      <div class="row container p-0 m-4">
+        <div class="col-auto">
+          <p class="font-weight-bold my-2">Tipo IVA:</p>
+        </div>
+
+        <div class="col-auto">
+          <input class="my-2" id="basico" type="radio" name="typeIVA" value="Basico"> Básico
+          <input class="my-2" id="minimo" type="radio" name="typeIVA" value="Mínimo"> Mínimo
+          <input class="my-2" id="exento" type="radio" name="typeIVA" value="Exento" checked> Exento
+        </div>
+        <div class="col-auto">
+          <p class="font-weight-bold my-2">Cantidad</p>
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" type="search" id="count">
+        </div>
+        <div class="col p-0">
+          <div class="btn-group" role="group">
+            <button class="btn btn-light btn-block" id="btnIngresar"
+              style="background-color: rgb(67, 71, 71); color:white">Guardar</button>
+          </div>
+        </div>
+
+      </div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>ID</th>
+              <th>ID Padre</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th></th>
+
+            </tr>
+          </thead>
+          <tbody id="toinformation"></tbody>
+        </table>
+      </div>
+  </form>
+
+
+  <footer class="text-muted bg-light">
+    <div class="container">
+      <p>Este sitio fue creado por DN Servicios</p>
+    </div>
+  </footer>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dropzone.js"></script>
+<script src="js/init.js"></script>
+<script src="js/products.js"></script>
+<script src="js/verification.js"></script>
+<!-- <script>
+  $(document).ready(function () {
+    $(".bi").hover(
+      function () {
+        $(this).addClass("animate__pulse");
+      },
+      function () {
+        $(this).removeClass("animate__pulse");
+      }
+    );
+  });
+</script> -->
+</html>
